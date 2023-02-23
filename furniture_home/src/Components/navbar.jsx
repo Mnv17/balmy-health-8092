@@ -1,7 +1,9 @@
-import {Routes, Route, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 import img1 from "./images/Screenshot (756).png";
 import "./navbar.css";
 import {AiOutlineShoppingCart} from "react-icons/ai"
+
+
 
 
 export function Navbar (){
@@ -9,8 +11,13 @@ export function Navbar (){
     return(
         <>
        <div className="navbar" >
-       <img className="logo" src={img1} alt="" />
+        <div className="logo">
+        <img  src={img1} alt="" />
+          <h5>Furniture Home</h5>
+        </div>
+       
        <select placeholder='Select option' className="select-option">
+        <option value="defaultoption">Select your City</option>
                 <option value='option1'>Delhi</option>
                 <option value='option2'>Bengalore</option>
                 <option value='option3'>Chennai</option>
@@ -26,12 +33,13 @@ export function Navbar (){
                             </svg>
                         </button>                    
                 </div>
-                <AiOutlineShoppingCart className="icon"/>
+                <div className="icon">
+                <AiOutlineShoppingCart />
+                <p className="cart">Cart</p>
+                </div>
+               
                 <button className="login-button">LOGIN/SIGNUP</button>
        </div>
-      
-        
-       
-        </>
+       </>
     )
 }
