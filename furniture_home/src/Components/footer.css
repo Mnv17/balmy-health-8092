@@ -11,6 +11,8 @@
     background-color: rgb(187, 12, 12);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-bottom: 10px;
+    margin-top: 120px;
 }
 .footer-button{
     width: 200px;
@@ -30,3 +32,100 @@
     margin-top:20px;
     border-radius: 15px;
 }
+
+.footer-icons {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.footer-icons a {
+    color: #2F4858;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-tag{
+    margin-left:15px;
+}
+
+.footer-two{
+    display: flex;
+}
+.footer-two>p{
+    width: 20%;
+    font-size: small;
+    font-weight: lighter;
+    margin-top: 40px;
+}
+
+.footersecond {
+    width: 98%;
+    display: flex;
+    margin: auto;
+}
+.footersecond>div{
+    /* / border: 1px solid black; / */
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+
+.footersecond img:first-child{
+    width: 150px;
+    height: 50px;
+
+}
+.footersecond img:last-child{
+    width: 140px;
+    height: 40px;
+}
+
+.Call-icon:hover {
+    color: rgb(15, 251, 7);
+    }
+
+.mail-icon:hover{
+    color: rgb(27, 138, 241);
+   text-decoration: none;
+ }
+ 
+ .youtube-icon:hover {
+   
+ color: rgb(241, 27, 27);
+ }
+ 
+ .twitter-icon:hover{
+   
+  color: rgb(87, 146, 224);
+ }
+ .facebook-icon:hover{
+   
+    color: rgb(4, 95, 213);
+   }
+ 
+ .instagram-icon:hover{
+   
+  color: rgb(241, 27, 173);
+ }
+ 
+ .linkedin-icon:hover{
+   
+  color: rgb(6, 73, 161);
+ }
+ 
+ .pinterest-icon:hover{
+   
+   color: rgb(241, 27, 27);
+ }

@@ -1,13 +1,14 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import img1 from "./images/Screenshot (756).png";
 import "./navbar.css";
 import {AiOutlineShoppingCart} from "react-icons/ai"
-
-
-
+import {FaRegHeart} from "react-icons/fa";
+import {} from "@auth0/auth0-react";
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export function Navbar (){
-
+    const { loginWithRedirect , isAuthenticated, logout } = useAuth0();
     return(
         <>
        <div className="navbar" >
@@ -34,11 +35,24 @@ export function Navbar (){
                         </button>                    
                 </div>
                 <div className="icon">
-                <AiOutlineShoppingCart />
-                <p className="cart">Cart</p>
+                <Link to="">
+                    <AiOutlineShoppingCart /> 
+                </Link>
+                <Link to="">
+                    <FaRegHeart/>
+                    </Link>                
                 </div>
+             
+                {isAuthenticated ?(
+                   <button className="login-button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                   Log Out
+                 </button>
+                ):(
+                    <button className="login-button" onClick={() => loginWithRedirect()}>LOGIN/SIGNUP</button>
+                )}
                
-                <button className="login-button">LOGIN/SIGNUP</button>
+                
+                
        </div>
        </>
     )

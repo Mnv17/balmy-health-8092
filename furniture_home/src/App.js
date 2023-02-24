@@ -2,14 +2,15 @@ import './App.css';
 import { Navbar } from './Components/navbar';
 import { MiddlePart } from "./Components/middle";
 import { Footer } from './Components/footer';
-import { MiddleDiv } from './Components/middle1';
-
+import {Slider} from "./SliderComponents/slider.jsx";
+import { ImagelSlider } from './SliderComponents/Image';
 function App() {
   return (
   <>
     <Navbar/>
+    <Slider/>
     <MiddlePart/>
-    <MiddleDiv/>
+    <ImagelSlider/>
     <Footer/>
     </>
      
