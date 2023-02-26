@@ -1,0 +1,82 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+export function SofaPage() {
+  const [data, setData] = useState([])
+  const [formattedData, setFormattedData] = useState([]);
+  useEffect(() => {
+    loadSofasData()
+  }, [])
+
+  const loadSofasData = async () => {
+    try {
+      const response = await axios.get(
+        "https://63c54f2af3a73b3478530d0f.mockapi.io/EcommerceProducts/"
+      );
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+  useEffect(() => {
+    console.log("data", data);
+    const formattedData = data.map((element) => {
+      const formattedPrice = Number(element.totalPrice.replace(/,/g, ""));
+      const discountPrice =
+        formattedPrice - (formattedPrice * element.discount) / 100;
+      return {
+        id: element.id,
+        name: element.name,
+        brandName: element.brandName,
+        image: element.image,
+        totalPrice: formattedPrice,
+        discount: element.discount,
+        shippingDay: element.shippingDay,
+        discountPrice: discountPrice,
+      };
+    });
+    setFormattedData(formattedData);
+  }, [data]);
+
+  return (
+    <>
+      <Upper />
+      <div className="FirstDiv">
+        <h2>All Sofas</h2>
+        <p>Perfect for the whole family to pile onto for game nights or for you to lounge on while binging your favorite TV shows, the sofa is that cozy piece of furniture that can truly bring any room to life. Available in so many exciting designs, shapes, and seating arrangements, the sofa design can be easily ... More</p>
+      </div>
+      <div className="filterdiv">
+        <div>
+          <select name="" id=""></select>
+        </div>
+        <div>
+
+        </div>
+      </div>
+
+      <div className="sofadiv">
+        {formattedData.map((item) => (
+          <div key={item.id} className="item">
+            <img className="image" src={item.image} alt={item.name} />
+            <p className="name">{item.name}</p>
+            <p className="brandName">{item.brandName}</p>
+            <p className="totalPrice">Total Price: ₹{item.totalPrice.toFixed(2)}</p>
+            <p className="discount">Discount: {item.discount}%</p>
+            <p className="discountPrice">Discount Price: ₹{item.discountPrice.toFixed(2)}</p>
+            <p className="shippingDay">Seating Capacity: {item.shippingDay}</p>
+            <button className="add-to-cart-button">Add to Cart</button>
+            <div className="bore">
+            <button className="add-to-compare-button">Add to Compare</button>
+            <button className="view-options-button">View 2 Options</button>
+            </div>
+           
+          </div>
+        ))}
+      </div>
+
+      <Footer />
+    </>
+  )
+}
