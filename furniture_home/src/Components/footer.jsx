@@ -40,7 +40,7 @@ export function Footer(){
     <div className="footer-two">
         <p className="footer-tag">© 2023. Edunetwork Pvt. Ltd.</p>
     <div className="footersecond">
-                    <div class="footer-icons">
+                    <div className="footer-icons">
                         <Link to="" className="Call-icon"><IoIosCall /></Link>
                         <Link to="" className="mail-icon"><IoIosMail /></Link>
                         <Link to="" className="facebook-icon"><GrFacebookOption /></Link>

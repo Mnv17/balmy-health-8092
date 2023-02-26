@@ -1,20 +1,19 @@
 import './App.css';
-import { Navbar } from './Components/navbar';
-import { MiddlePart } from "./Components/middle";
-import { Footer } from './Components/footer';
-import {Slider} from "./SliderComponents/slider.jsx";
-import { ImagelSlider } from './SliderComponents/Image';
+import { HomePage } from './Components/Pages/HomePage.jsx';
+import { Route, Routes } from 'react-router-dom';
 import {FurniturePage} from "./SliderComponents/Cards";
+import  {Cart}  from './Components/Cart';
+
 function App() {
+  
   return (
-  <>
-    <Navbar/>
-    <Slider/>
-    <ImagelSlider/>
-    <MiddlePart/>
-    <Footer/>
-    </>
-     
+  <Routes>
+   <Route path='/' element={<HomePage/>}> 
+   </Route>
+   <Route path='/ProductPage' element={<FurniturePage />}></Route>
+   <Route path='/CartPage' element={<Cart/>}></Route>
+    </Routes>
+    
     
   );
 }

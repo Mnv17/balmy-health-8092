@@ -20,15 +20,14 @@
   border: none;
   margin: auto;
   border-radius: 10px;
-  color: rgb(187, 12, 12);
+  background-color: rgb(187, 12, 12);
   border:1px solid rgb(187, 12, 12);
   margin-left: 50px;
   margin-top: 30px;
-}
-.btn:hover{
-    cursor: pointer;
-  background-color: white;
-  background-color: rgb(187, 12, 12);
-  color: white;
   
+}
+
+.btn a{
+  text-decoration: none;
+  color: white;
 }
