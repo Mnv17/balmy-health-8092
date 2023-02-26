@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    margin-top: 150px;
 }
 
 .middle-img{
@@ -41,7 +42,7 @@
 
 .icon{
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
     
 .Middle-two{

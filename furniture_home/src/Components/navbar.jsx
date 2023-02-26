@@ -3,7 +3,6 @@ import img1 from "./images/Screenshot (756).png";
 import "./navbar.css";
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import {FaRegHeart} from "react-icons/fa";
-import {} from "@auth0/auth0-react";
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 

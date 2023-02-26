@@ -5,6 +5,10 @@ import {BsTruckFlatbed} from "react-icons/bs"
 export function MiddlePart(){
     return(
         <>
+         <div className="Middle-one">
+       <h2>Furniture Home Provide's ..</h2>
+       <hr />
+       </div>
     <div>
     <div className="middle-div">
         <div className="middle-box">
@@ -34,7 +38,7 @@ export function MiddlePart(){
     </div>
     </div>
     <div className="Middle-one">
-       <h2>There's more to Renting</h2>
+       <h2>There's more to Explore ..</h2>
        <hr />
        </div>
         <div className="Middle-two">

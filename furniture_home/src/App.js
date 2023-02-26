@@ -4,13 +4,14 @@ import { MiddlePart } from "./Components/middle";
 import { Footer } from './Components/footer';
 import {Slider} from "./SliderComponents/slider.jsx";
 import { ImagelSlider } from './SliderComponents/Image';
+import {FurniturePage} from "./SliderComponents/Cards";
 function App() {
   return (
   <>
     <Navbar/>
     <Slider/>
-    <MiddlePart/>
     <ImagelSlider/>
+    <MiddlePart/>
     <Footer/>
     </>
      
