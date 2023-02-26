@@ -1,0 +1,17 @@
+.SliderSix{
+   margin: 50px;
+   /* gap: 50px; */
+}
+.Slider-div{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 100%;
+    height: 500px;
+}
+/* .Slider-div:hover{
+    background-color: rgb(187, 12, 12);
+    color: white; 
+} */
+
+.Slider-div>p{
+    margin-top: 100px;
+}

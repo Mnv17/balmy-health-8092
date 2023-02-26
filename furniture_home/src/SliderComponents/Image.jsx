@@ -1,7 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Image.css"
-import {FurniturePage} from "./Cards";
+import "./Image.css";
+import { Link } from "react-router-dom";
+
 
 export function ImagelSlider(){
     const responsive = {
@@ -143,7 +144,13 @@ return (
             
 
         </Carousel>
-        <button className="btn" onClick={{FurniturePage}}>Explore More ▶</button>
+        
+        <button className="btn">
+        <Link to="/ProductPage">
+            Explore More ▶
+            </Link>
+            </button>
+        
         </>
 
 )

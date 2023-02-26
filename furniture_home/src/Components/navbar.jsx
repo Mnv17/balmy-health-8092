@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import img1 from "./images/Screenshot (756).png";
 import "./navbar.css";
 import {AiOutlineShoppingCart} from "react-icons/ai"
-import {FaRegHeart} from "react-icons/fa";
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -12,7 +11,10 @@ export function Navbar (){
         <>
        <div className="navbar" >
         <div className="logo">
-        <img  src={img1} alt="" />
+            <Link to="/">
+            <img  src={img1} alt="" />
+            </Link>
+        
           <h5>Furniture Home</h5>
         </div>
        
@@ -34,16 +36,14 @@ export function Navbar (){
                         </button>                    
                 </div>
                 <div className="icon">
-                <Link to="">
+                <Link to="/CartPage">
                     <AiOutlineShoppingCart /> 
-                </Link>
-                <Link to="">
-                    <FaRegHeart/>
-                    </Link>                
-                </div>
-             
+                    
+                </Link> 
+                           
+                </div>  
                 {isAuthenticated ?(
-                   <button className="login-button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                   <button className="logout-button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                    Log Out
                  </button>
                 ):(

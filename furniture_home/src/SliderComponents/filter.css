@@ -1,0 +1,12 @@
+.filterdiv{
+    width: 200px;
+    height: 150px;
+    margin-left: 50px;
+    
+  }
+  .select{
+    border: 0px;
+    font-size: 15px;
+    background-color:white ;
+    color: rgb(187, 12, 12);
+  }
